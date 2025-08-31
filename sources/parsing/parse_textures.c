@@ -6,7 +6,7 @@
 /*   By: ggevorgi <sp1tak.gg@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 12:09:25 by ggevorgi          #+#    #+#             */
-/*   Updated: 2025/08/31 17:50:15 by ggevorgi         ###   ########.fr       */
+/*   Updated: 2025/08/31 19:44:45 by ggevorgi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ bool	is_texture_line(char *line)
 	return (ft_strncmp(line, "NO ", 3) == 0 || ft_strncmp(line, "SO ", 3) == 0
 		|| ft_strncmp(line, "WE ", 3) == 0 || ft_strncmp(line, "EA ", 3) == 0);
 }
-
 
 int	parse_texture_line(char *line, t_data *data)
 {
@@ -80,9 +79,8 @@ int	parse_color_line(char *line, t_data *data)
 	t_color	color;
 
 	color.r = 0;
-	color.g = 0; 
+	color.g = 0;
 	color.b = 0;
-
 	if (!parse_color(&color, line + 2))
 		return (-1);
 	if (line[0] == 'F')
